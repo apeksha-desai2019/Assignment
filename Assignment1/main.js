@@ -1,16 +1,3 @@
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-/* navbar end */
-
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("Slides");
@@ -21,14 +8,23 @@ function showSlides(n) {
       slides[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" active1", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " active1";
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 /* Toggle between adding and removing the "responsive" class to nopnav */
-function myFunction() {
+function menuFunction() {
   var x = document.getElementById("topnav");
   if (x.className === "navbar") {
     x.className += " responsive";
