@@ -1,151 +1,143 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Template</title>
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto, arial, sans-serif">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template</title>
+  <link rel="stylesheet" href="./scss/assignment1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto, arial, sans-serif">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+</head>
 <body>
   <div class="container">
     <!-- Navbar -->
     <nav>
-      <div class="navbar" id="topnav">
+      <div class="navbar">
         <div class="nav-header">
           <div class="nav-title">
             TEMPLATE
           </div>
         </div>
-        <a href=""></a> 
         <a href="#home" class="active">Home</a>
         <a href="#about">About
-          <i class="fa fa-caret-down"></i>
-        </a>
+          <i class="fa fa-caret-down"></i></a>
         <a href="#services">Services</a>
         <a href="#potfolio">Portfolio</a>
         <a href="#pricing">Pricing</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
-        <a class="button">Get Strated</a>
-        <a href=""></a>
-        <a href="javascript:void(0);" class="menu-bar" onclick="menuFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+        <a href="#getstarted" class="button">Get Strated</a>
+        <a href="javascript:void(0);" class="menu-bar"><i class="fa fa-bars"></i></a>
       </div>
     </nav>
-<!-- navbar end -->
-<!-- Slider -->
+    <!-- navbar end -->
+    <!-- Slider -->
     <div id="slider-area">
       <div class="slideshow">
         <div class="slides fade">
           <img src="./images/slide-1.jpg">
-          <div class="slider-text">
+          <div class="slider-wrap">
             <h1>Welcome to Template</h1>
-            <h5>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
-              Occaecati alias dolorem mollitia ut. Similique ea
-              voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto
-            </h5>
+            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
+              Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus
+              deleniti vel. Minus et tempore modi architecto
+            </p>
           </div>
           <button class="btn-red">Read More</button>
         </div>
         <div class="slides fade">
           <img src="./images/slide-2.jpg">
-          <div class="slider-text">
+          <div class="slider-wrap">
             <h1>Welcome to Template</h1>
-            <h5>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
-              Occaecati alias dolorem mollitia ut. Similique ea
-              voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto
-            </h5>
+            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
+              Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus
+              deleniti vel. Minus et tempore modi architecto
+            </p>
           </div>
           <button class="btn-red">Read More</button>
         </div>
         <div class="slides fade">
           <img src="./images/slide-3.jpg">
-          <div class="slider-text">
+          <div class="slider-wrap">
             <h1>Welcome to Template</h1>
-            <h5>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
-              Occaecati alias dolorem mollitia ut. Similique ea
-              voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto
-            </h5>
+            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
+              Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus
+              deleniti vel. Minus et tempore modi architecto
+            </p>
           </div>
           <button class="btn-red">Read More</button>
         </div>
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+        <a class="prev"><i class="material-icons">keyboard_arrow_left</i></a>
+        <a class="next"><i class="material-icons">keyboard_arrow_right</i></a>
+        <span class="dot" id="dot-one"></span>
+        <span class="dot" id="dot-two"></span>
+        <span class="dot" id="dot-three"></span>
       </div>
     </div>
-<!-- slider end -->
-<!-- Text-area-->
+    <!-- slider end -->
+    <!-- Text-area-->
     <div id="text-area">
       <div class="text-row">
         <div class="text-column">
           <div class="text-content">
-            <div>
-              <div class="eum">EUM IPSAM LABORUM
-                DELENITI VELITENA</div>
-              <p class="Voliptatem">Voliptatem dignissimos provident quasi
-                corpoisvolluptates sit assum perenda sruen
-                jonee trave
-              </p>
-            </div>
+            <div class="eum">EUM IPSAM LABORUM DELENITI VELITENA</div>
+            <p class="Voliptatem">Voliptatem dignissimos provident quasi corpoisvolluptates sit assum perenda sruen
+              jonee trave
+            </p>
           </div>
         </div>
         <div class="text-column">
           <div class="text-content">
             <div class="content-font">
-              <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum <br>
+              <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident,sunt in culpa qui officia deserunt
+                mollit anim id est laborum
               <div class="text-list">
-                <p> <i class="material-icons md-color">done_all</i> Ullamco laboris nisi ut aliquip ex ea
-                  commodo consequa </p>
-                <p><i class="material-icons md-color">done_all</i> Duis aute irure dolor in reprehenderit in
-                  voluptate velit </p>
-                <p><i class="material-icons md-color">done_all</i> Ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.Duis
-                  auteirure dolor in reprehenderit in</p>
+                <p><i class="material-icons md-color">done_all</i> Ullamco laboris nisi ut aliquip ex ea commodo
+                  consequa</p>
+                <p><i class="material-icons md-color">done_all</i> Duis aute irure dolor in reprehenderit in voluptate
+                  velit</p>
+                <p><i class="material-icons md-color">done_all</i> Ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.Duis auteirure dolor in reprehenderit in</p>
                 </p>
               </div>
-              <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.</em>
+              <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</em>
             </div>
           </div>
         </div>
       </div>
     </div>
-<!-- Text-area end -->
-<!-- Client-area -->
+    <!-- Text-area end -->
+    <!-- Client-area -->
     <div id="client-area">
       <table>
         <tbody>
           <tr>
-            <td><img src="./client/client-1.png" alt="client1"></td>
-            <td><img src="./client/client-2.png" alt="client2"></td>
-            <td><img src="./client/client-3.png" alt="client3"></td>
-            <td><img src="./client/client-4.png" alt="client4"></td>
-            <td><img src="./client/client-5.png" alt="client5"></td>
-            <td><img src="./client/client-6.png" alt="client6"></td>
+            <td><img src="./client/client-1.png" alt="client1-myob"></td>
+            <td><img src="./client/client-2.png" alt="client2-belimo"></td>
+            <td><img src="./client/client-3.png" alt="client3-lifegroup"></td>
+            <td><img src="./client/client-4.png" alt="client4-lilly"></td>
+            <td><img src="./client/client-5.png" alt="client5-critrus"></td>
+            <td><img src="./client/client-6.png" alt="client6-trustly"></td>
           </tr>
         </tbody>
       </table>
     </div>
-<!-- Client-area end -->
-<!-- Service-area-->
+    <!-- Client-area end -->
+    <!-- Service-area-->
     <div id="service-area">
       <div>
-        <h2>SERVICES<span></span></h2>
+        <h2>SERVICES</h2>
       </div>
-      <div class="area-header">THE SERVICES WE OFFER</div>
+      <h1 class="area-header">THE SERVICES WE OFFER</h1>
       <div class="service-row">
         <div class="service-column">
           <div class="service-content">
-            <div class="service-icon"><i class="material-icons md-18">monitor</i></div>
+            <i class="material-icons service-icon">monitor</i>
             <div class="service-info">
               <p class="service-tag">Lorem Ipsum </p>
               <p class="service-font">
@@ -154,7 +146,7 @@
             </div>
           </div>
           <div class="service-content">
-            <div class="service-icon"><i class="material-icons md-18">image</i></div>
+            <i class="material-icons service-icon">image</i>
             <div class="service-info">
               <p class="service-tag"> Sed ut Perspiciatis</p>
               <p class="service-font">
@@ -163,7 +155,7 @@
             </div>
           </div>
           <div class="service-content">
-            <div class="service-icon"><i class="material-icons md-18">public</i></div>
+            <i class="material-icons service-icon">public</i>
             <div class="service-info">
               <p class="service-tag">Magni Dolore</p>
               <p class="service-font">
@@ -174,7 +166,7 @@
         </div>
         <div class="service-column">
           <div class="service-content">
-            <div class="service-icon"><i class="material-icons md-18">poll</i></div>
+            <i class="material-icons service-icon">poll</i>
             <div class="service-info">
               <p class="service-tag">Dolor Sitema</p>
               <p class="service-font">
@@ -183,7 +175,7 @@
             </div>
           </div>
           <div class="service-content">
-            <div class="service-icon"><i class="material-icons md-18">dns</i></div>
+            <i class="material-icons service-icon">dns</i>
             <div class="service-info">
               <p class="service-tag">Nemo Enim</p>
               <p class="service-font">
@@ -192,7 +184,7 @@
             </div>
           </div>
           <div class="service-content">
-            <div class="service-icon"><i class="material-icons md-18">event</i></div>
+            <i class="material-icons service-icon">event</i>
             <div class="service-info">
               <p class="service-tag">Eiusmod Tempor</p>
               <p class="service-font">
@@ -203,20 +195,20 @@
         </div>
       </div>
     </div>
-<!-- Service-area end    -->
-<!-- Work-area -->
+    <!-- Service-area end    -->
+    <!-- Work-area -->
     <div id="work-area">
       <div>
-        <h2>PORTFOLIO<span></span></h2>
+        <h2>PORTFOLIO</h2>
       </div>
-      <div class="area-header">RECENT WORKS</div>
+      <h1 class="area-header">RECENT WORKS</h1>
       <div class="work-navbar">
         <a href="#all" class="active">ALL</a>
         <a href="#app">APP</a>
         <a href="#card">CARD</a>
         <a href="#web">WEB</a>
       </div>
-<!-- photo grid -->
+      <!-- photo grid -->
       <div class="work-row">
         <div class="work-column">
           <img src="./portfolio/portfolio-1.jpg" alt="portfolio-Image">
@@ -235,15 +227,14 @@
         </div>
       </div>
     </div>
-<!-- Work-area end -->
-<!-- footer-area -->
+    <!-- Work-area end -->
+    <!-- footer-area -->
     <footer>
       <div class="footer-area">
-        <div class="template" style="text-align: left;">
+        <div class="template">
           <h5>Template</h5>
-          <p class="one">A108 Adam Street <br> NY 535022, USA
-          </p>
-          <div class="details" style="text-align: left;">
+          <p class="address">A108 Adam Street NY 535022, USA</p>
+          <div class="contact-details">
             <p>Phone:<span> +15689 55488 56 </span>
               Email: <span>info@example.com</span></p>
           </div>
@@ -253,39 +244,36 @@
           <div class="media"><a href=""><i class="fab fa-skype fa-xs"></i></a></div>
           <div class="media"><a href=""><i class="fab fa-linkedin  fa-xs "></i></a></div>
         </div>
-        <div class="usefullink" style="text-align: left;">
+        <div class="usefullink">
           <h4>Useful Links</h4>
-          <p> > Home</p>
-          <p> > About us</p>
-          <p> > Services</p>
-          <p> > Terms of services</p>
-          <p> > Privacy policy</p>
+          <p><i class="fas fa-angle-right"></i> Home</p>
+          <p><i class="fas fa-angle-right"></i> About us</p>
+          <p><i class="fas fa-angle-right"></i> Services</p>
+          <p><i class="fas fa-angle-right"></i> Terms of services</p>
+          <p><i class="fas fa-angle-right"></i> Privacy policy</p>
         </div>
-        <div class="ourservices" style="text-align: left;">
+        <div class="ourservices">
           <h4>Our Services</h4>
-          <P>> Web Design</P>
-          <p>> Web Devlopment</p>
-          <p>> Product Managment</p>
-          <p>> Marketing</p>
-          <p>> Graphic Desaign</p>
+          <P><i class="fas fa-angle-right"></i> Web Design</P>
+          <p><i class="fas fa-angle-right"></i> Web Devlopment</p>
+          <p><i class="fas fa-angle-right"></i> Product Managment</p>
+          <p><i class="fas fa-angle-right"></i> Marketing</p>
+          <p><i class="fas fa-angle-right"></i> Graphic Desaign</p>
         </div>
         <div class="ournewsletter">
           <h4> Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint
-            culpa legam noster magna
-          </p>
-          <div style="display: flex;"><input type="email" name="email"> <button>Subscribe</button></div>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <div class="input-box"><input type="email" name="email"> <button>Subscribe</button></div>
         </div>
       </div>
       <div class="footer-2">
         <p class="footer-text1">
           <i class="far fa-copyright"></i> Copyright Template. All Rights Reserved</p>
         <p class="footer-text"> Designed by BootstrapMade</p>
-        <div class="icons">
-          <i class="material-icons">keyboard_arrow_up</i>
-        </div>
+          <i class="material-icons icons">keyboard_arrow_up</i>
       </div>
     </footer>
   </div>
   <script src="main.js"></script>
 </body>
+</html>

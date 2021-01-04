@@ -22,7 +22,7 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
   display: none;
   font-size: 10px;
   font-weight: 550;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 0px 10px;
   text-decoration: none;
   
 }
@@ -58,6 +58,7 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
   display: none;
   font-weight: 500;
   font-size: 10px;
+  outline: none;
   position: absolute;
   padding: 5px 5px;  
 }
@@ -65,19 +66,18 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
   position: relative;
 }
 .navbar.responsive a.menu-bar {
+  margin-top: 5px;
+  margin-right: 2px;
   position: absolute;
   right: 0;
   top: 0;
 }
 .navbar.responsive a {
-  top: 90%;
-  right: 41%;
+  /*top: 20%;
+  right: 41%;*/
   display:block;
-  text-align: center;
-}
-.navbar.responsive a.btn-red {
-  display: block;
-  text-align: center;
+  margin-top: 18px;
+  text-align: center;  
 }
 /* -----iPad view-----*/
 @media only screen 
@@ -88,13 +88,13 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
     }
     .navbar .nav-header .nav-title {
       font-size: 30px;
-      padding-right: 0;
+      padding-right: 5px;
       padding-left: 5px;
     }
     .navbar  a {
       font-size: 13px ;
       display: inline-block;
-      padding: 15px 5px 5px 6px;
+      padding: 15px 13px 5px 6px;
     }
     .navbar .menu-bar {
       display: none;
@@ -104,7 +104,7 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
       font-size: 13px;
       margin-top: 6px;
       padding: 8px 8px;
-      margin-left: 10px;
+      margin-left: 5px;
     }
 }
 @media only screen 
@@ -115,7 +115,7 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
     }
     .navbar .nav-header .nav-title {
       font-size: 30px;
-      padding-right: 0;
+      padding-right: 30px;
       padding-left: 50px;
     }
     .navbar  a {
@@ -131,7 +131,7 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
       font-size: 13px;
       margin-top: 6px;
       padding: 8px 8px;
-      margin-left: 100px;
+      margin-left: 110px;
     }
 }
 /* -----Laptop view-----*/
@@ -172,6 +172,7 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
       font-size: 28px;
       font-weight: 700;
       margin-left: 148px;
+      margin-right: 25px;
     }
     .navbar  a {
       font-size: 15px ;
@@ -185,7 +186,7 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
       display: inline-block;
       font-size: 15px;
       margin-top: 5px;
-      margin-left: 275px;
+      margin-left: 280px;
       padding: 10px 30px;
     }
 }
@@ -201,7 +202,7 @@ body {font-family: "Google Sans", Roboto, arial, sans-serif;  margin:0}
 img {
   width: 100%;
 }
-.slider-text {
+.slider-wrap {
   bottom: 40%;
   color: #f2f2f2;
   padding: 5px 5px;
@@ -212,7 +213,7 @@ h1 {
   font-size: 22px;
   font-weight: 700;
 }
-.slider-text h5 {
+.slider-wrap p {
   font-size: 10px;
   font-weight: 100;
 }
@@ -221,13 +222,11 @@ h1 {
   cursor: pointer;
   position: absolute;
   top: 45%;
-  width: 25px;
+  width: auto;
   height: auto;
-  padding: 5px;
+  padding: 1px;
   margin-top: -22px;
   color: white;
-  font-weight: bold;
-  font-size: 10px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -253,11 +252,11 @@ h1 {
   background-color: #B0B1B4;
   display: inline-block;
   height: 6px;
+  left: -8px;
   margin: 0 2px;
   position: relative;
   top: -35px;
-  width: 6px;
-  left: -8px;
+  width: 6px;  
 }
 .active1, .dot:hover {
   background-color: #D9322E; 
@@ -272,6 +271,7 @@ h1 {
   font-size: 10px;
   left: 48%;
   -ms-transform: translate(-50%, -50%);
+  outline: none;
   position: absolute;
   padding: 8px 8px;
   top: 62%;
@@ -296,19 +296,20 @@ h1 {
 @media only screen 
   and (min-width: 640px) 
   and (max-width: 1366px) {
-    .slider-text {
+    .slider-wrap {
       padding: 30px 30px;
       bottom: 40%;    
     }
     h1 {
       font-size: 35px;
     }
-    .slider-text  h5 {
-      font-size: 14px ;
+    .slider-wrap  p {
+      font-size: 13px ;
     }
     .btn-red {
       font-size: 14px;
       padding: 10px 10px;
+      top: 58%;
     }
     .dot {
       height: 9px;
@@ -317,9 +318,8 @@ h1 {
       top: -40px;
       left: -15px;
     }
-    .next, .prev {
-      font-size: 20px;
-      width: 35px;
+    .prev, .next {
+      padding: 5px;
     }
     .next {
       right: 10px;
@@ -332,19 +332,19 @@ h1 {
 /* -----Laptop view----- */
 @media only screen 
   and (min-width: 1366px) {
-    .slider-text {
+    .slider-wrap {
       padding: 165px 165px;
       bottom: 30%;
     }
     h1 {
       font-size: 46px;
     }
-    .slider-text  h5 {
+    .slider-wrap  p {
       font-size: 17px ;
     }
     .btn-red {
       font-size: 14px;
-      top: 55%;
+      top: 52%;
       padding: 10px 30px;
     }
     .dot {
@@ -354,10 +354,8 @@ h1 {
       top: -40px;
       left: -15px;
     }
-    .next, .prev {
-      font-size: 20px;
-      width: 50px;
-      padding: 15px;
+    .prev, .next {
+      padding: 10px;
     }
     .next {
       right: 20px;
@@ -476,7 +474,7 @@ h1 {
       font-size: 16px;
     }
     .eum {
-      font-size: 45.5px;
+      font-size: 45px;
     }
     .Voliptatem {
         font-size: 26px;
@@ -593,10 +591,10 @@ table td img {
   text-align: left;
   width: auto;
 }
-.service-icon {
+/*.service-icon {
   float: left;
   margin-top: 12px;
-}
+}*/
 .service-info {
   padding-left: 40px;
 } 
@@ -610,7 +608,9 @@ table td img {
   font-size: 10px;
   font-weight: lighter; 
 }
-.material-icons.md-18 { 
+.material-icons.service-icon {
+  float: left;
+  margin-top: 12px; 
   font-size: 25px; 
   color: #D9322E;
 }
@@ -642,7 +642,7 @@ table td img {
     div .service-font {
       font-size: 13px;
     }
-    .material-icons.md-18 { 
+    .material-icons.service-icon { 
       font-size: 30px; 
       color: #D9322E;
     }
@@ -676,7 +676,7 @@ table td img {
     div .service-font {
       font-size: 14px;
     }
-    .material-icons.md-18 { 
+    .material-icons.service-icon { 
       font-size: 40px; 
       color: #D9322E;
   }
@@ -712,7 +712,7 @@ h2:after {
   vertical-align: bottom;
   width: 120px;
 }
-div.area-header {
+h1.area-header {
   color: rgb(60, 60, 100);
   font-size: 20px;
   font-weight: 800;
@@ -782,7 +782,7 @@ div.area-header {
     .work-navbar a {
       font-size: 12px;
     }
-    div.area-header {
+    h1.area-header {
       font-size: 28px;
       margin-left: 10px;
     }
@@ -811,7 +811,7 @@ div.area-header {
       padding: 10px 15px 10px 20px;
       font-size: 12px;
     }
-    div.area-header {
+    h1.area-header {
       font-size: 35px;
       margin-left: 185px;
     } 
@@ -835,8 +835,8 @@ footer {
 }
 .footer-area {
   background-color: #515D6A;
-  display: flex;
   color: #fff;
+  display: flex;
   font-family:" Roboto, arial, sans-serif;Google Sans", Roboto, arial, sans-serif;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -844,7 +844,7 @@ footer {
   margin-bottom: 0;
   padding: 10px 20px ;
   text-transform: capitalize;
-  width: auto;
+  width: auto; 
 }
 footer p {
   color: #979EA6;
@@ -858,6 +858,7 @@ h5, div {
 h5 {
   font-size: 20px;
   margin-top: 20px;
+  text-align: left;
 }
 .ournewsletter {
   font-size: 14px;
@@ -879,63 +880,67 @@ a {
   color: #fff;
   text-decoration: none;
   }
-footer div .one {
+footer div .address {
   color: white;
   font-size: 10px;
   font-weight: lighter;
   margin-bottom: 15px;
+  margin-right: 120px;
   text-transform: none;
+  text-align: left;
 }
-footer .details {
+footer .contact-details {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 8px;
+  text-align: left;
 }
-footer .details p {
-  font-size: 12px;
-  color: white;
-  padding-right: 80px;
-}
-footer .details span {
-
+footer .contact-details p {
   color: white;
   font-size: 12px;
-  
-  font-weight: lighter;
+  padding-right: 50px;
+ 
+}
+footer .contact-details span {
+  color: white;
+  font-size: 12px;
+  font-weight: lighter; 
+  text-transform: lowercase;
 }
 footer  .template {
   margin-left: 0px;
   width: 220px;
 }
 footer .template a {
-  display: inline-block;
-  padding: 4px 3px 10px 6px;
-  margin-right: 5px;
   border-radius: 1% solid white;
-  text-align: center;
-  line-height: 20px;
   color: white;
+  display: inline-block;
+  line-height: 20px;
+  margin-right: 5px;
+  padding: 4px 3px 10px 6px;
+  text-align: center;
 }
 footer .media {
-  float: left;
   background-color: #636E79;
   border-radius: 3px;
-  margin-right: 10px;
+  float: left;
   height: 32px;
-  width: 32px;
+  margin-right: 10px;
   text-align: center;
-  
+  width: 32px; 
 }
 
 a:hover {
   color: rgba(0, 0, 0, .3);  
 }
 footer .usefullink {
+  text-align: left;
   width: 500px;
   margin-right: 5px;
 }
 footer .ourservices{
+  text-align: left;
   width: 500px;
 }
 footer .usefullink p {
@@ -944,16 +949,20 @@ footer .usefullink p {
 footer .ourservices p {
   margin-bottom: 12px;
 }
-footer .ournewsletter p{
+footer .ournewsletter p {
+  color: white;
   font-weight: lighter;
   font-size: 10px;
-  color: white;
   }
 footer .ournewsletter p, input {
   padding: 5px;
 }
 footer .ournewsletter {
+  text-align: left;
   margin-right: 10px;
+}
+footer .input-box {
+  display: flex;
 }
 footer .ournewsletter input {
   border-style: none;
@@ -964,20 +973,20 @@ footer .ournewsletter input {
   height: 30px;
   margin-bottom: 20px;
   margin-right: 0;
-  width: 150px;
   outline: none;
- 
+  width: 150px;
 }
 footer .ournewsletter button {
-  padding: 7px 10px;
-  color: #fff;
   background-color: #D9322E;
   border-top-right-radius: 3.5px;
   border-bottom-right-radius: 3.5px;
+  border-style: none;
+  color: #fff;
   font-size: 14px;
   height: 30px;
-  border-style: none;
   margin-left: 0;
+  padding: 7px 10px;
+  outline: none;
 }
 /* ------ipad view----- */
 @media only screen 
@@ -987,13 +996,13 @@ footer .ournewsletter button {
       padding: 0 15px 0 ;
     }
     footer .template {
-      text-align: center;
       margin-left: 0px;
+      text-align: center;
       width: 220px;
     }
     footer .usefullink{
-      width: 180px;
       margin-right: 0;
+      width: 180px;
     }
     footer .ourservices{
       width: 180px;
@@ -1030,8 +1039,8 @@ footer .ournewsletter button {
       font-size: 28px;
     }
     footer .template {
-      text-align: center;
       margin-left: 140px;
+      text-align: center;
       width: 210px;
     }
     footer .usefullink {
@@ -1067,15 +1076,16 @@ footer .ournewsletter button {
       padding: 7px 25px;
       height: 35px;
     }
-    footer div .one {
+    footer div .address {
       font-size: 14px;
       font-weight: lighter;
+      margin-right: 80px;
     }
-    footer .details span {
+    footer .contact-details span {
       font-size: 13.5px;
       font-weight: lighter;
     }
-    footer .details p {
+    footer .contact-details p {
       font-size: 14px;
       padding-right: 20px;
     }
@@ -1094,7 +1104,7 @@ footer .ournewsletter button {
   width: 100%;
 }
 
-.footer-2 .icons {
+.material-icons.icons {
   background-color: #D9322E;
   border-radius: 3px;
   color: white;
@@ -1131,7 +1141,7 @@ footer .ournewsletter button {
       font-size:10px ;
       color: gray;
     }
-    .footer-2 .icons {
+    .footer-2 .material-icons.icons {
       height: 30px;
       padding: 5px 0px 0px 0px;
       width: 30px;
@@ -1150,7 +1160,7 @@ footer .ournewsletter button {
       font-size: 13px ;
       color: gray;
     }
-    .footer-2 .icons {
+    .footer-2 .material-icons.icons {
       height: 40px;
       margin-right: 20px;
       padding: 8px 0px 0px 0px;

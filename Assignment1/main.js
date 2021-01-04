@@ -25,13 +25,23 @@ nxt.addEventListener("click", function () { plusSlides(1) });
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+let slide1 = document.querySelector("#dot-one");
+slide1.addEventListener("click",function(){currentSlide(1)} );
+
+let slide2 = document.querySelector("#dot-two");
+slide2.addEventListener("click",function(){currentSlide(2)} );
+
+let slide3 = document.querySelector("#dot-three");
+slide3.addEventListener("click",function(){currentSlide(3)} );
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 /* ---Navbar---*/
+let menubar = document.querySelector(".menu-bar");
+menubar.addEventListener("click",menuFunction);
 function menuFunction() {
-  const x = document.querySelector("#topnav");
+  const x = document.querySelector(".navbar");
   if (x.className === "navbar") {
     x.className += " responsive";
   } else {
