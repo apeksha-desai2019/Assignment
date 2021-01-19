@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto, arial, sans-serif">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -30,7 +31,7 @@
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
         <a href="#getstarted" class="button">Get Strated</a>
-        <a href="javascript:void(0);" class="menu-bar"><i class="fa fa-bars"></i></a>
+        <a href="javascript:void(0);" class="menu-bar" ><i class="fa fa-bars"></i></a>
       </div>
     </nav>
     <!-- navbar end -->
@@ -128,17 +129,17 @@
     <!-- Client-area end -->
     <!-- Service-area-->
     <div id="service-area">
-      <div>
-        <h2>SERVICES</h2>
+      <div  class="service-lable">
+        <span>SERVICES</span>
+        <h2 class="area-header">THE SERVICES WE OFFER</h2>
       </div>
-      <h1 class="area-header">THE SERVICES WE OFFER</h1>
       <div class="service-row">
         <div class="service-column">
           <div class="service-content">
             <i class="material-icons service-icon">monitor</i>
             <div class="service-info">
               <p class="service-tag">Lorem Ipsum </p>
-              <p class="service-font">
+              <p class="service-txt">
                 Voluptatum deleniti atque corrupti quos dolores et quas
                 molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
@@ -147,7 +148,7 @@
             <i class="material-icons service-icon">image</i>
             <div class="service-info">
               <p class="service-tag"> Sed ut Perspiciatis</p>
-              <p class="service-font">
+              <p class="service-txt">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur</p>
             </div>
@@ -156,7 +157,7 @@
             <i class="material-icons service-icon">public</i>
             <div class="service-info">
               <p class="service-tag">Magni Dolore</p>
-              <p class="service-font">
+              <p class="service-txt">
                 At vero eos et accusamus et iusto odio dignissimos ducimus
                 qui blanditiis praesentium voluptatum deleniti atque</p>
             </div>
@@ -167,7 +168,7 @@
             <i class="material-icons service-icon">poll</i>
             <div class="service-info">
               <p class="service-tag">Dolor Sitema</p>
-              <p class="service-font">
+              <p class="service-txt">
                 Minim veniam, quis nostrud exercitation ullamco laboris nisi
                 ut aliquip ex ea commodo consequat tarad limino ata</p>
             </div>
@@ -176,7 +177,7 @@
             <i class="material-icons service-icon">dns</i>
             <div class="service-info">
               <p class="service-tag">Nemo Enim</p>
-              <p class="service-font">
+              <p class="service-txt">
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum</p>
             </div>
@@ -185,7 +186,7 @@
             <i class="material-icons service-icon">event</i>
             <div class="service-info">
               <p class="service-tag">Eiusmod Tempor</p>
-              <p class="service-font">
+              <p class="service-txt">
                 Et harum quidem rerum facilis est et expedita distinctio. Nam
                 libero tempore, cum soluta nobis est eligendi </p>
             </div>
@@ -196,10 +197,10 @@
     <!-- Service-area end    -->
     <!-- Work-area -->
     <div id="work-area">
-      <div>
-        <h2>PORTFOLIO</h2>
+      <div class="work-lable">
+        <span>PORTFOLIO</span>
+        <h2 class="area-header">RECENT WORKS</h2>
       </div>
-      <h1 class="area-header">RECENT WORKS</h1>
       <div class="work-navbar">
         <a href="#all" class="active">ALL</a>
         <a href="#app">APP</a>
@@ -268,7 +269,7 @@
         <p class="footer-text1">
           <i class="far fa-copyright"></i> Copyright Template. All Rights Reserved</p>
         <p class="footer-text"> Designed by BootstrapMade</p>
-        <i class="material-icons icons">keyboard_arrow_up</i>
+        <i class="material-icons icons" onclick="scrollToTop()">keyboard_arrow_up</i>
       </div>
     </footer>
   </div>

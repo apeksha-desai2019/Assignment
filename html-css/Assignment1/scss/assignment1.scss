@@ -1,12 +1,18 @@
 $blue-color: #556270;
+$dark-blue-color: rgb(60, 60, 100);
+$gray-color: #c0c0c0;
+$off-white-color: #f8f9fa;
 $red-color: #d9322e;
 $white-color: #fff;
-$off-white-color: #f8f9fa;
 
 @mixin break-point($size) {
 	@media only screen and (min-width: $size) {
 		@content;
 	}
+}
+
+* {
+	box-sizing: border-box;
 }
 
 .container {
@@ -24,53 +30,11 @@ $off-white-color: #f8f9fa;
 		width: auto;
 
 		@include break-point(768px) {
-			padding: 5px;
-		}
-
-		@include break-point(1024px) {
 			padding: 15px;
 		}
 
 		@include break-point(1366px) {
 			padding: 20px;
-		}
-
-		a {
-			color: $blue-color;
-			display: none;
-			font-size: 10px;
-			font-weight: 600;
-			padding: 10px 10px 0;
-			text-decoration: none;
-
-			@include break-point(768px) {
-				display: inline-block;
-				font-size: 13px;
-				padding: 7px;
-			}
-
-			@include break-point(1366px) {
-				font-size: 15px;
-			}
-
-			&:hover {
-				color: $red-color;
-			}
-		}
-
-		.active-home {
-			color: $red-color;
-		}
-
-		.menu-bar {
-			display: inline-block;
-			float: right;
-			font-size: 10px;
-			padding-top: 1px;
-
-			@include break-point(768px) {
-				display: none;
-			}
 		}
 
 		.nav-logo {
@@ -96,9 +60,37 @@ $off-white-color: #f8f9fa;
 				@include break-point(1366px) {
 					font-size: 28px;
 					font-weight: 700;
-					margin: 0 10px 0 150px;
+					margin: 5px 10px 0 120px;
 				}
 			}
+		}
+
+		a {
+			color: $blue-color;
+			display: none;
+			font-size: 10px;
+			font-weight: 600;
+			padding: 10px 10px 0;
+			text-decoration: none;
+
+			@include break-point(768px) {
+				display: inline-block;
+				font-size: 13px;
+				padding: 7px;
+			}
+
+			@include break-point(1366px) {
+				font-size: 15px;
+				padding: 12px;
+			}
+
+			&:hover {
+				color: $red-color;
+			}
+		}
+
+		.active-home {
+			color: $red-color;
 		}
 
 		a.button {
@@ -116,7 +108,7 @@ $off-white-color: #f8f9fa;
 			@include break-point(768px) {
 				display: inline-block;
 				font-size: 13px;
-				margin-left: 50px;
+				margin-left: 30px;
 				padding: 8px;
 			}
 
@@ -126,8 +118,19 @@ $off-white-color: #f8f9fa;
 
 			@include break-point(1366px) {
 				font-size: 15px;
-				margin-left: 260px;
+				margin-left: 220px;
 				padding: 10px 30px;
+			}
+		}
+
+		.menu-bar {
+			display: inline-block;
+			float: right;
+			font-size: 10px;
+			padding-top: 1px;
+
+			@include break-point(768px) {
+				display: none;
 			}
 		}
 	}
@@ -135,7 +138,7 @@ $off-white-color: #f8f9fa;
 	.navbar.responsive {
 		position: relative;
 
-		a.menu-bar {
+		.menu-bar {
 			margin: 5px 2px 0 0;
 			position: absolute;
 			right: 0;
@@ -197,13 +200,12 @@ $off-white-color: #f8f9fa;
 				position: absolute;
 
 				@include break-point(768px) {
-					bottom: 40%;
 					padding: 30px;
 				}
 
 				@include break-point(1366px) {
-					bottom: 28%;
-					padding: 178px;
+					bottom: 29%;
+					padding: 165px;
 				}
 
 				h1 {
@@ -221,7 +223,7 @@ $off-white-color: #f8f9fa;
 
 				p {
 					font-size: 10px;
-					font-weight: 100;
+					font-weight: 300;
 
 					@include break-point(768px) {
 						font-size: 13px;
@@ -257,7 +259,8 @@ $off-white-color: #f8f9fa;
 
 				@include break-point(1366px) {
 					font-size: 14px;
-					top: 52%;
+					top: 55%;
+					left: 50%;
 					padding: 10px 30px;
 				}
 			}
@@ -340,7 +343,7 @@ $off-white-color: #f8f9fa;
 
 			@include break-point(768px) {
 				height: 9px;
-				left: -15px;
+				left: -20px;
 				margin: 0 4px;
 				top: -40px;
 				width: 9px;
@@ -348,9 +351,8 @@ $off-white-color: #f8f9fa;
 
 			@include break-point(1366px) {
 				height: 12px;
-				left: -15px;
+				left: -12px;
 				margin: 0 2px;
-				top: -40px;
 				width: 12px;
 			}
 
@@ -374,7 +376,7 @@ $off-white-color: #f8f9fa;
 		text-align: left;
 
 		@include break-point(1366px) {
-			padding-left: 185px;
+			padding-left: 150px;
 		}
 
 		.text-column {
@@ -392,31 +394,29 @@ $off-white-color: #f8f9fa;
 			}
 
 			@include break-point(1366px) {
-				-ms-flex: 43%;
-				flex: 43%;
-				max-width: 43%;
-				padding: 12px 12px;
+				-ms-flex: 45%;
+				flex: 45%;
+				max-width: 45%;
+				padding: 12px;
 			}
 
 			.text-content {
 				height: auto;
-				padding: 0 10px;
-				text-align: left;
 				height: auto;
 				width: 100%;
 
 				.eum {
 					color: $blue-color;
 					font-size: 25px;
-					margin-top: 10px;
 					font-weight: 700;
+					margin-top: 10px;
 
 					@include break-point(768px) {
 						font-size: 30px;
 					}
 
 					@include break-point(1024px) {
-						font-size: 40px;
+						font-size: 43px;
 					}
 				}
 
@@ -430,7 +430,7 @@ $off-white-color: #f8f9fa;
 					}
 
 					@include break-point(1366px) {
-						font-size: 26px;
+						font-size: 28px;
 					}
 				}
 
@@ -477,6 +477,7 @@ $off-white-color: #f8f9fa;
 			border-collapse: collapse;
 			margin-top: 40px;
 			table-layout: fixed;
+			text-align: center;
 			width: 100%;
 
 			tr {
@@ -485,12 +486,11 @@ $off-white-color: #f8f9fa;
 
 				td {
 					height: 50px;
-					text-align: center;
-	
+
 					@include break-point(768px) {
 						height: 60px;
 					}
-	
+
 					@include break-point(1366px) {
 						height: 100px;
 					}
@@ -498,9 +498,8 @@ $off-white-color: #f8f9fa;
 					img {
 						height: 30px;
 						width: 40px;
-	
+
 						@include break-point(768px) {
-							height: 30px;
 							width: 80px;
 						}
 					}
@@ -513,175 +512,148 @@ $off-white-color: #f8f9fa;
 	#service-area {
 		position: relative;
 		margin-top: 60px;
-	}
 
-	h2 {
-		color: #6b7682;
-		font-size: 8px;
-		font-weight: bolder;
-		letter-spacing: 2px;
-		margin-left: 12px;
-		overflow: hidden;
-		text-align: left;
+		.service-lable {
+			text-align: left;
 
-		@include break-point(768px) {
-			font-size: 8px;
-			margin-left: 10px;
+			span {
+				color: #6b7682;
+				font-size: 8px;
+				font-weight: bolder;
+				letter-spacing: 2px;
+				margin-left: 12px;
+				overflow: hidden;
+
+				@include break-point(768px) {
+					margin-left: 10px;
+				}
+
+				@include break-point(1366px) {
+					font-size: 10px;
+					margin-left: 150px;
+				}
+
+				&:after {
+					border-top: 1px solid $red-color;
+					content: "";
+					display: inline-block;
+					height: 0.5em;
+					margin-left: 12px;
+					vertical-align: bottom;
+					width: 120px;
+				}
+			}
+
+			.area-header {
+				color: $dark-blue-color;
+				font-size: 20px;
+				font-weight: 800;
+				margin: 0 0 30px 10px;
+
+				@include break-point(768px) {
+					font-size: 28px;
+					margin-left: 10px;
+				}
+
+				@include break-point(1366px) {
+					font-size: 35px;
+					margin-left: 150px;
+				}
+			}
 		}
 
-		@include break-point(1366px) {
-			font-size: 10px;
-			margin-left: 195px;
-		}
+		.service-row {
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			text-align: center;
 
-		&:after {
-			border-top: 1px solid $red-color;
-			content: "";
-			display: inline-block;
-			height: 0.5em;
-			margin-left: 12px;
-			vertical-align: bottom;
-			width: 120px;
-		}
-	}
-
-	h1.area-header {
-		color: rgb(60, 60, 100);
-		font-size: 20px;
-		font-weight: 800;
-		margin: 0 0 30px 10px;
-
-		@include break-point(768px) {
-			font-size: 28px;
-			margin-left: 10px;
-		}
-
-		@include break-point(1366px) {
-			font-size: 35px;
-			margin-left: 195px;
-		}
-	}
-
-	.service-column {
-		-ms-flex: 100%;
-		border-left: 5px solid $white-color;
-		border-top: $white-color;
-		flex: 100%;
-		max-width: 100%;
-		padding: 0 10px 0 5px;
-
-		@include break-point(768px) {
-			-ms-flex: 50%;
-			flex: 50%;
-			max-width: 50%;
-			padding: 3px;
-		}
-
-		@include break-point(1366px) {
-			-ms-flex: 43%;
-			flex: 43%;
-			max-width: 43%;
-		}
-	}
-
-	.service-row {
-		display: -ms-flexbox;
-		display: flex;
-		flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		text-align: center;
-
-		@include break-point(768px) {
-			padding-left: 0px;
-		}
-
-		@include break-point(1366px) {
-			padding-left: 185px;
-		}
-	}
-
-	.service-content {
-		background-color: $off-white-color;
-		border-radius: 10px;
-		height: auto;
-		margin-bottom: 10px;
-		padding: 10px 20px 20px;
-		text-align: left;
-		width: auto;
-
-		@include break-point(768px) {
-			height: auto;
-			margin-bottom: 10px;
-			width: auto;
-		}
-
-		@include break-point(1366px) {
-			height: auto;
-			margin-bottom: 20px;
-			padding: 15px 30px 40px;
-			width: auto;
-		}
-	}
-
-	.service-info {
-		padding-left: 40px;
-
-		@include break-point(768px) {
-			padding-left: 50px;
-		}
-
-		@include break-point(1366px) {
-			margin-left: 30px;
-		}
-	}
-
-	.service-tag {
-		color: #556270;
-		font-weight: 700;
-		font-size: 15px;
-
-		@include break-point(768px) {
-			font-size: 15px;
-		}
-
-		@include break-point(1366px) {
-			font-size: 18px;
-		}
-	}
-
-	.service-font {
-		color: $blue-color;
-		font-size: 10px;
-		font-weight: lighter;
-
-		@include break-point(768px) {
-			font-size: 13px;
-		}
-
-		@include break-point(1366px) {
-			font-size: 14px;
-		}
-	}
-
-	.material-icons.service-icon {
-		color: $red-color;
-		float: left;
-		margin-top: 12px;
-		font-size: 25px;
-
-		@include break-point(768px) {
-			color: $red-color;
-			font-size: 30px;
-		}
-
-		@include break-point(1366px) {
-			color: $red-color;
-			font-size: 40px;
-		}
-
-		.service-icon {
 			@include break-point(1366px) {
-				margin-top: 12px;
+				padding-left: 150px;
+			}
+
+			.service-column {
+				-ms-flex: 100%;
+				border-left: 5px solid $white-color;
+				flex: 100%;
+				max-width: 100%;
+				padding: 0 10px 0 5px;
+
+				@include break-point(768px) {
+					-ms-flex: 50%;
+					flex: 50%;
+					max-width: 50%;
+					padding: 3px;
+				}
+
+				@include break-point(1366px) {
+					-ms-flex: 435%;
+					flex: 45%;
+					max-width: 45%;
+				}
+
+				.service-content {
+					background-color: $off-white-color;
+					border-radius: 10px;
+					height: auto;
+					margin-bottom: 10px;
+					padding: 10px 20px 20px;
+					text-align: left;
+					width: auto;
+
+					@include break-point(1366px) {
+						margin-bottom: 20px;
+						padding: 15px 30px 40px;
+					}
+
+					.material-icons.service-icon {
+						color: $red-color;
+						float: left;
+						font-size: 25px;
+						margin-top: 12px;
+
+						@include break-point(768px) {
+							font-size: 30px;
+						}
+
+						@include break-point(1366px) {
+							font-size: 40px;
+						}
+					}
+
+					.service-info {
+						padding-left: 40px;
+
+						@include break-point(768px) {
+							padding-left: 50px;
+						}
+
+						@include break-point(1366px) {
+							margin-left: 30px;
+						}
+
+						.service-tag {
+							color: #556270;
+							font-weight: 700;
+							font-size: 15px;
+
+							@include break-point(1366px) {
+								font-size: 18px;
+							}
+						}
+
+						.service-txt {
+							color: $blue-color;
+							font-size: 10px;
+							font-weight: lighter;
+
+							@include break-point(1366px) {
+								font-size: 14px;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -689,8 +661,6 @@ $off-white-color: #f8f9fa;
 	/* -----Work-area----- */
 	#work-area {
 		background-color: $white-color;
-		border-radius: var(--main-radius);
-		grid-area: work;
 		margin-top: 30px;
 		position: relative;
 		text-align: center;
@@ -698,137 +668,130 @@ $off-white-color: #f8f9fa;
 		@include break-point(1366px) {
 			margin-top: 120px;
 		}
-	}
 
-	* {
-		box-sizing: border-box;
-	}
+		.work-lable {
+			text-align: left;
 
-	h2 {
-		color: #6b7682;
-		font-size: 8px;
-		font-weight: bolder;
-		letter-spacing: 2px;
-		margin-left: 12px;
-		overflow: hidden;
-		text-align: left;
+			span {
+				color: #6b7682;
+				font-size: 8px;
+				font-weight: bolder;
+				letter-spacing: 2px;
+				margin-left: 12px;
+				overflow: hidden;
 
-		@include break-point(768px) {
-			font-size: 8px;
-			margin-left: 10px;
+				@include break-point(768px) {
+					margin-left: 10px;
+				}
+
+				@include break-point(1366px) {
+					margin-left: 150px;
+				}
+
+				&:after {
+					border-top: 1px solid $red-color;
+					content: "";
+					display: inline-block;
+					height: 0.5em;
+					margin-left: 12px;
+					vertical-align: bottom;
+					width: 120px;
+				}
+			}
+
+			.area-header {
+				color: $dark-blue-color;
+				font-size: 20px;
+				font-weight: 800;
+				margin: 0 0 30px 10px;
+
+				@include break-point(768px) {
+					font-size: 28px;
+					margin-left: 10px;
+				}
+
+				@include break-point(1366px) {
+					font-size: 35px;
+					margin-left: 150px;
+				}
+			}
 		}
 
-		@include break-point(1366px) {
-			font-size: 10px;
-			margin-left: 195px;
-		}
-
-		&:after {
-			border-top: 1px solid $red-color;
-			content: "";
+		.work-navbar {
+			background-color: $white-color;
 			display: inline-block;
-			height: 0.5em;
-			margin-left: 12px;
-			vertical-align: bottom;
-			width: 120px;
-		}
-	}
+			height: auto;
+			overflow: hidden;
 
-	h1.area-header {
-		color: rgb(60, 60, 100);
-		font-size: 20px;
-		font-weight: 800;
-		margin: 0 0 30px 10px;
-		text-align: left;
+			a {
+				color: $dark-blue-color;
+				display: block;
+				font-size: 8px;
+				float: left;
+				font-weight: 600;
+				padding: 10px;
+				text-align: center;
+				text-decoration: none;
+				margin-left: 5px;
 
-		@include break-point(768px) {
-			font-size: 28px;
-			margin-left: 10px;
-		}
+				@include break-point(768px) {
+					font-size: 12px;
+				}
 
-		@include break-point(1366px) {
-			font-size: 35px;
-			margin-left: 195px;
-		}
-	}
+				@include break-point(1366px) {
+					padding: 10px 15px 10px 20px;
+				}
 
-	.work-navbar {
-		background-color: $white-color;
-		display: inline-block;
-		height: auto;
-		text-align: center;
-		overflow: hidden;
-
-		a {
-			color: rgb(60, 60, 100);
-			display: block;
-			font-size: 8px;
-			float: left;
-			padding: 10px;
-			text-align: center;
-			text-decoration: none;
-			margin-left: 5px;
-
-			@include break-point(768px) {
-				font-size: 12px;
+				&:hover {
+					background-color: $red-color;
+					color: $white-color;
+				}
 			}
 
-			@include break-point(1366px) {
-				font-size: 12px;
-				padding: 10px 15px 10px 20px;
-			}
-
-			&:hover {
+			a.active {
 				background-color: $red-color;
+				border-radius: 2px;
 				color: $white-color;
 			}
 		}
 
-		a.active {
-			background-color: $red-color;
-			border-radius: 2px;
-			color: $white-color;
+		.work-row {
+			-ms-flex-wrap: wrap;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+
+			@include break-point(1366px) {
+				padding-left: 150px;
+			}
+
+			.work-column {
+				-ms-flex: 100%;
+				flex: 100%;
+				max-width: 100%;
+				padding: 0px 10px;
+
+				@include break-point(768px) {
+					-ms-flex: 33.3%;
+					flex: 33.3%;
+					max-width: 33.3%;
+				}
+
+				@include break-point(1366px) {
+					-ms-flex: 30%;
+					flex: 30%;
+					max-width: 30%;
+				}
+
+				img {
+					margin-top: 8px;
+					width: auto;
+					width: 100%;
+				}
+			}
 		}
-	}
-	.work-row {
-		-ms-flex-wrap: wrap;
-		display: -ms-flexbox;
-		display: flex;
-		flex-wrap: wrap;
-		padding-left: 0px;
-
-		@include break-point(768px) {
-			padding-left: 0px;
-		}
-
-		@include break-point(1366px) {
-			padding-left: 185px;
-		}
-	}
-
-	.work-column {
-		-ms-flex: 100%;
-		flex: 100%;
-		max-width: 100%;
-		padding: 0px 10px;
-
-		@include break-point(768px) {
-			-ms-flex: 33.3%;
-			flex: 33.3%;
-			max-width: 33.3%;
-		}
-
-		@include break-point(1366px) {
-			-ms-flex: 28.6%;
-			flex: 28.6%;
-			max-width: 28.6%;
-		}
-
-		img {
-			margin-top: 8px;
-			vertical-align: middle;
-			width: auto;
-			width: 100%;
+		.show {
+			display: block;
 		}
 	}
 
@@ -836,304 +799,242 @@ $off-white-color: #f8f9fa;
 	footer {
 		background: #4a5562;
 
-		p {
-			color: #979ea6;
-			font-size: 10px;
-			font-weight: 18px;
-			line-height: 180%;
-
-			@include break-point(768px) {
-				font-size: 12px;
-			}
-
-			@include break-point(1366px) {
-				font-size: 14px;
-			}
-		}
-
-		div {
-			.address {
-				color: $white-color;
-				font-size: 10px;
-				font-weight: lighter;
-				margin: 0 120px 15px 0;
-				text-transform: none;
-				text-align: left;
-
-				@include break-point(1366px) {
-					font-size: 14px;
-					font-weight: lighter;
-					margin-right: 80px;
-				}
-			}
-		}
-
-		.contact-details {
+		.footer-area {
+			background-color: #515d6a;
+			color: #fff;
 			display: flex;
 			flex-wrap: wrap;
-			margin: 10px 0 8px 0;
-			text-align: left;
-
-			p {
-				color: $white-color;
-				font-size: 12px;
-				padding-right: 50px;
-
-				@include break-point(1366px) {
-					font-size: 14px;
-					padding-right: 20px;
-				}
-			}
-
-			span {
-				color: $white-color;
-				font-size: 12px;
-				font-weight: lighter;
-				text-transform: lowercase;
-
-				@include break-point(1366px) {
-					font-size: 13.5px;
-					font-weight: lighter;
-				}
-			}
-		}
-
-		.template {
-			margin-left: 0px;
-			width: 220px;
+			justify-content: space-between;
+			margin-top: 20px;
+			margin-bottom: 0;
+			padding: 10px 20px;
+			text-transform: capitalize;
+			width: auto;
 
 			@include break-point(768px) {
-				margin-left: 0px;
-				text-align: center;
-				width: 220px;
+				padding: 0 15px;
 			}
 
 			@include break-point(1366px) {
-				margin-left: 140px;
-				text-align: center;
-				width: 210px;
-			}
-
-			a {
-				border-radius: 1% solid $white-color;
-				color: $white-color;
-				display: inline-block;
-				line-height: 20px;
-				margin-right: 5px;
-				padding: 4px 3px 10px 6px;
-				text-align: center;
-			}
-		}
-
-		.media {
-			background-color: #636e79;
-			border-radius: 3px;
-			float: left;
-			height: 32px;
-			margin-right: 10px;
-			text-align: center;
-			width: 32px;
-		}
-
-		.usefullink {
-			text-align: left;
-			width: 500px;
-			margin-right: 5px;
-
-			@include break-point(768px) {
-				margin-right: 0;
-				width: 180px;
-			}
-
-			@include break-point(1366px) {
-				width: 180px;
-				margin-right: 0px;
+				margin-top: 80px;
+				padding: 40px 50px;
 			}
 
 			p {
-				margin-bottom: 12px;
-			}
-		}
-
-		.ourservices {
-			text-align: left;
-			width: 500px;
-
-			@include break-point(768px) {
-				width: 180px;
-			}
-
-			@include break-point(1366px) {
-				width: 180px;
-			}
-
-			p {
-				margin-bottom: 12px;
-			}
-		}
-
-		.ournewsletter {
-			p {
-				color: $white-color;
-				font-weight: lighter;
+				color: #979ea6;
 				font-size: 10px;
-				padding: 5px;
+				font-weight: 18px;
+				line-height: 180%;
+
+				@include break-point(768px) {
+					font-size: 12px;
+				}
 
 				@include break-point(1366px) {
 					font-size: 14px;
+				}
+			}
+
+			.template {
+				text-align: left;
+				width: 210px;
+
+				@include break-point(1366px) {
+					margin-left: 120px;
+				}
+
+				h5 {
+					font-size: 20px;
+					margin: 20px 0;
+
+					@include break-point(1366px) {
+						font-size: 28px;
+					}
+				}
+
+				.address {
+					color: $white-color;
+					font-size: 10px;
 					font-weight: lighter;
+					margin: 0 120px 15px 0;
+					text-transform: none;
+
+					@include break-point(1366px) {
+						font-size: 14px;
+						margin-right: 80px;
+					}
+				}
+
+				.contact-details {
+					display: flex;
+					flex-wrap: wrap;
+					margin: 10px 0 8px;
+
+					p {
+						color: $white-color;
+						font-size: 12px;
+						font-weight: 700;
+						padding-right: 50px;
+
+						@include break-point(1366px) {
+							font-size: 14px;
+							padding-right: 20px;
+						}
+					}
+
+					span {
+						color: $white-color;
+						font-size: 12px;
+						font-weight: lighter;
+						text-transform: lowercase;
+
+						@include break-point(1366px) {
+							font-size: 14px;
+						}
+					}
+				}
+
+				.media {
+					background-color: #636e79;
+					border-radius: 3px;
+					float: left;
+					height: 32px;
+					margin-right: 10px;
+					text-align: center;
+					width: 32px;
+
+					a {
+						border-radius: 1% solid $white-color;
+						color: $white-color;
+						display: inline-block;
+						line-height: 20px;
+						margin-right: 5px;
+						padding: 4px 3px 10px 6px;
+
+						&:hover {
+							color: rgba(240, 235, 235, 0.3);
+						}
+					}
 				}
 			}
 
-			text-align: left;
-			margin-right: 10px;
-
-			@include break-point(1366px) {
-				margin-right: 150px;
-				width: 300px;
-			}
-
-			input {
-				border-style: none;
-				border-top-left-radius: 3.5px;
-				border-bottom-left-radius: 3.5px;
-				background-color: $white-color;
-				color: #a29e9e;
-				height: 30px;
-				margin: 0 0 20px 0;
-				outline: none;
-				width: 150px;
+			.usefullink {
+				text-align: left;
+				width: 500px;
+				margin-right: 5px;
 
 				@include break-point(768px) {
-					height: 35px;
-					width: 200px;
+					width: 180px;
 				}
 
-				@include break-point(1366px) {
-					height: 35px;
-					width: 200px;
+				h4 {
+					font-size: 15px;
+					margin-top: 25px;
+
+					@include break-point(1366px) {
+						font-size: 18px;
+					}
+				}
+
+				p {
+					margin-bottom: 12px;
 				}
 			}
 
-			button {
-				background-color: $red-color;
-				border-top-right-radius: 3.5px;
-				border-bottom-right-radius: 3.5px;
-				border-style: none;
-				color: #fff;
+			.ourservices {
+				text-align: left;
+				width: 500px;
+
+				@include break-point(768px) {
+					width: 180px;
+				}
+
+				h4 {
+					font-size: 15px;
+					margin-top: 25px;
+
+					@include break-point(1366px) {
+						font-size: 18px;
+					}
+				}
+
+				p {
+					margin-bottom: 12px;
+				}
+			}
+
+			.ournewsletter {
+				text-align: left;
+				margin-right: 10px;
 				font-size: 14px;
-				height: 30px;
-				padding: 7px 10px;
-				outline: none;
-
-				@include break-point(768px) {
-					height: 35px;
-					padding: 7px 25px;
-				}
+				margin-top: 5px;
+				width: 300px;
 
 				@include break-point(1366px) {
-					height: 35px;
-					padding: 7px 25px;
+					margin-right: 120px;
+					width: 300px;
+				}
+
+				h4 {
+					font-size: 15px;
+					margin-top: 25px;
+
+					@include break-point(1366px) {
+						font-size: 18px;
+					}
+				}
+
+				p {
+					color: $white-color;
+					font-weight: lighter;
+					font-size: 10px;
+					padding: 5px;
+
+					@include break-point(1366px) {
+						font-size: 14px;
+						font-weight: lighter;
+					}
+				}
+
+				.input-box {
+					display: flex;
+
+					input {
+						border-style: none;
+						border-top-left-radius: 3.5px;
+						border-bottom-left-radius: 3.5px;
+						background-color: $white-color;
+						color: #a29e9e;
+						height: 30px;
+						margin-bottom: 30px;
+						outline: none;
+						width: 150px;
+
+						@include break-point(768px) {
+							height: 35px;
+							width: 200px;
+						}
+					}
+
+					button {
+						background-color: $red-color;
+						border-top-right-radius: 3.5px;
+						border-bottom-right-radius: 3.5px;
+						border-style: none;
+						color: #fff;
+						font-size: 14px;
+						height: 30px;
+						padding: 7px 10px;
+						outline: none;
+
+						@include break-point(768px) {
+							height: 35px;
+							padding: 7px 25px;
+						}
+					}
 				}
 			}
 		}
-
-		.input-box {
-			display: flex;
-		}
-	}
-	.footer-area {
-		background-color: #515d6a;
-		color: #fff;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		margin-top: 20px;
-		margin-bottom: 0;
-		padding: 10px 20px;
-		text-transform: capitalize;
-		width: auto;
-
-		@include break-point(768px) {
-			padding: 0 15px 0;
-		}
-
-		@include break-point(1366px) {
-			margin-top: 80px;
-			padding: 40px 50px;
-		}
-	}
-
-	h5 {
-		font-size: 20px;
-		margin-bottom: 5px;
-		margin-top: 20px;
-		text-align: left;
-
-		@include break-point(1366px) {
-			font-size: 28px;
-		}
-	}
-
-	div {
-		margin-bottom: 5px;
-	}
-
-	.ournewsletter {
-		font-size: 14px;
-		margin-top: 5px;
-
-		h4 {
-			@include break-point(768px) {
-				font-size: 15;
-			}
-
-			@include break-point(1366px) {
-				font-size: 18px;
-			}
-		}
-	}
-
-	.ourservices {
-		h4 {
-			font-size: 14px;
-			margin-top: 25px;
-
-			@include break-point(768px) {
-				font-size: 15px;
-			}
-
-			@include break-point(1366px) {
-				font-size: 18px;
-			}
-		}
-	}
-
-	.usefullink {
-		h4 {
-			font-size: 14px;
-			margin-top: 25px;
-
-			@include break-point(768px) {
-				font-size: 15px;
-			}
-
-			@include break-point(1366px) {
-				font-size: 18px;
-			}
-		}
-	}
-
-	a {
-		color: $white-color;
-		text-decoration: none;
-		&:hover {
-			color: rgba(0, 0, 0, 0.3);
-		}
-	}
-
-	input {
-		padding: 5px;
 	}
 
 	/*-----footer-2-----*/
@@ -1142,68 +1043,55 @@ $off-white-color: #f8f9fa;
 		height: 85px;
 		position: relative;
 		text-align: center;
-		margin-bottom: 0;
-		margin-top: 0;
 		width: 100%;
 
-		p.footer-text1 {
-			font-size: 12px;
+		.footer-text1 {
 			color: $white-color;
+			font-size: 12px;
+			font-weight: lighter;
 			margin-bottom: 0;
-
-			@include break-point(768px) {
-				font-size: 12px;
-				color: $white-color;
-			}
 
 			@include break-point(1366px) {
 				font-size: 14px;
-				font-weight: lighter;
-				color: $white-color;
 			}
 		}
 
-		p.footer-text {
-			font-size: 9px;
-			color: #c0c0c0;
-
-			@include break-point(768px) {
-				color: #c0c0c0;
-				font-size: 10px;
-			}
+		.footer-text {
+			font-size: 10px;
+			color: $gray-color;
 
 			@include break-point(1366px) {
-				color: #c0c0c0;
 				font-size: 13px;
 			}
 		}
-	}
-	.material-icons.icons {
-		background-color: $red-color;
-		border-radius: 3px;
-		color: $white-color;
-		font-size: 20px;
-		float: right;
-		height: 25px;
-		margin-right: 10px;
-		padding: 0px 0px 10px 0px;
-		position: absolute;
-		right: 0;
-		top: 35%;
-		width: 25px;
 
-		@include break-point(768px) {
-			height: 30px;
-			padding: 5px 0px 0px 0px;
-			width: 30px;
-		}
+		.material-icons.icons {
+			background-color: $red-color;
+			border-radius: 3px;
+			color: $white-color;
+			font-size: 20px;
+			float: right;
+			height: 25px;
+			margin-right: 10px;
+			padding-bottom: 10px;
+			position: absolute;
+			right: 0;
+			top: 35%;
+			width: 25px;
 
-		@include break-point(1366px) {
-			height: 40px;
-			margin-right: 20px;
-			padding: 8px 0px 0px 0px;
-			top: 40%;
-			width: 40px;
+			@include break-point(768px) {
+				height: 30px;
+				padding-top: 10px;
+				width: 30px;
+			}
+
+			@include break-point(1366px) {
+				height: 40px;
+				margin-right: 20px;
+				padding-top: 8px;
+				top: 40%;
+				width: 40px;
+			}
 		}
 	}
 }

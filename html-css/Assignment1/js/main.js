@@ -48,3 +48,7 @@ function menuFunction() {
     x.className = "navbar";
   }
 } 
+/*---Footer---*/
+function scrollToTop() { 
+  $(window).scrollTop(0); 
+}
